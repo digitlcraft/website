@@ -113,6 +113,11 @@ text-align:center;
  .footer .footer-col {
  margin-bottom: 50px;
 }
+
+.folio {
+	max-width: 90%;
+}
+
 }
 @media screen and (max-width: 640px) {
  #banner {
