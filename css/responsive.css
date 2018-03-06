@@ -43,6 +43,19 @@
  .flex-control-nav {
  bottom: 20px;
 }
+
+.folio-header {
+	margin: 30px auto;
+	padding: 15px;
+	max-width: 800px;
+}
+
+.folio-body {
+	margin: 30px auto;
+	padding: 15px;
+	max-width: 800px;
+}
+
 }
 @media screen and (max-width: 768px) {
  #banner {
@@ -74,8 +87,7 @@ bottom: -130px;
 }
 
 .container {
-    padding-left: 0px;
-    padding-right: 0px;
+    max-width: 80%;
 }
 
 #overview {
@@ -113,6 +125,20 @@ text-align:center;
  .footer .footer-col {
  margin-bottom: 50px;
 }
+
+.folio-header {
+	margin: 30px auto;
+	padding: 15px;
+	max-width: 100%;
+}
+
+.folio-body {
+	margin: 30px auto;
+	padding: 15px;
+	max-width: 100%;
+}
+
+
 }
 @media screen and (max-width: 640px) {
  #banner {

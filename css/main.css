@@ -113,6 +113,10 @@ body {
 	font-weight: 400;
 	color: #6c7279;
 }
+html {
+	background-color:#201f22;
+}
+
 ul, ol {
 	margin: 0;
 	padding: 0;
@@ -480,7 +484,7 @@ ul li {
 .folio {
 	width: 100%;
 	margin: auto;
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 0.85);
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
@@ -490,24 +494,250 @@ ul li {
 	min-height: 16.43px;
     padding: 15px;
 	border-bottom: 1px solid #e5e5e5;
-	width: 900px;
+	width: 1024px;
     margin: 30px auto;
 }
 
 .folio-body {
-	width: 900px;
 	margin: 30px auto;
 	padding: 15px;
+	max-width: 1024px;
 }
 
 .folio-footer {
-	width: 900px;
+	width: 1024px;
 	margin: 30px auto;
 	padding: 15px;
 }
 
+/* ------------------------------------------------------------------------------
+	Masonry Layout
+-------------------------------------------------------------------------------*/
 
+.dw {
+	-webkit-animation: fade 2s;
+			animation: fade 2s;
+  }
+  .dw {
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+	-webkit-column-gap: 0;
+			column-gap: 0;
+	position: relative;
+  }
+  .dw * {
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+  }
+  .dw__fcs-crtn {
+	background-color: #000;
+	bottom: 0;
+	display: none;
+	left: 0;
+	opacity: 0.75;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 2;
+  }
+  @media (min-width: 768px) {
+	.dw {
+	  -webkit-column-count: 2;
+			  column-count: 2;
+	}
+  }
+  @media (min-width: 992px) {
+	.dw {
+	  -webkit-column-count: 3;
+			  column-count: 3;
+	}
+  }
+  @media (min-width: 1500px) {
+	.dw {
+	  -webkit-column-count: 4;
+			  column-count: 4;
+	}
+  }
+  .dw-pnl {
+	margin: 0;
+	padding: 5px;
+  }
+  .dw-pnl--fcs {
+	position: relative;
+  }
+  .dw-pnl--fcs:hover {
+	z-index: 3;
+  }
+  .dw-pnl--fcs:hover ~ .dw__fcs-crtn {
+	display: block;
+  }
+  .dw-pnl--pls {
+	-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+	-webkit-perspective: 1000;
+			perspective: 1000;
+	-webkit-transition: -webkit-transform 0.25s ease 0s;
+	transition: -webkit-transform 0.25s ease 0s;
+	transition: transform 0.25s ease 0s;
+	transition: transform 0.25s ease 0s, -webkit-transform 0.25s ease 0s;
+  }
+  .dw-pnl--pls:hover {
+	-webkit-transform: scale(1.02);
+			transform: scale(1.02);
+  }
+  .dw-pnl__cntnt {
+	/* border-radius: 10px; */
+	overflow: hidden;
+	/* padding: 20px; */
+	width: 100%;
+	border: 1px solid rgb(228, 228, 228);
+  }
+  @media (min-width: 768px) {
+	.dw-pnl {
+	  -webkit-column-break-inside: avoid;
+			  break-inside: avoid;
+	}
+  }
+  .dw-flp {
+	-webkit-perspective: 1000;
+			perspective: 1000;
+  }
+  .dw-flp:hover .dw-flp__cntnt {
+	-webkit-transform: rotateY(180deg);
+			transform: rotateY(180deg);
+  }
+  .dw-flp--sm {
+	height: 200px;
+  }
+  .dw-flp--md {
+	height: 300px;
+  }
+  .dw-flp--lg {
+	height: 400px;
+  }
+  .dw-flp__pnl {
+	-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+	border-radius: 10px;
+	height: 100%;
+	left: 0;
+	overflow: visible;
+	padding: 20px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+  }
+  .dw-flp__pnl--frnt {
+	-webkit-transform: rotateY(0deg);
+			transform: rotateY(0deg);
+	z-index: 2;
+  }
+  .dw-flp__pnl--bck {
+	-webkit-transform: rotateY(180deg);
+			transform: rotateY(180deg);
+  }
+  .dw-flp__cntnt {
+	height: 100%;
+	overflow: visible;
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+	-webkit-transition: 0.25s;
+	transition: 0.25s;
+  }
+  .dw-clstr {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 0;
+  }
+  @media (max-width: 430px) {
+	.dw-clstr--vrt {
+	  -webkit-box-orient: vertical;
+	  -webkit-box-direction: normal;
+		  -ms-flex-direction: column;
+			  flex-direction: column;
+	}
+  }
+  .dw-clstr--hrz {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+			flex-direction: column;
+  }
+  .dw-clstr__sgmnt {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 1;
+		-ms-flex: 1 1 auto;
+			flex: 1 1 auto;
+  }
+  .dw-clstr__sgmnt--rw {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+  }
+  @media (max-width: 430px) {
+	.dw-clstr__sgmnt--rw {
+	  -webkit-box-orient: vertical;
+	  -webkit-box-direction: normal;
+		  -ms-flex-direction: column;
+			  flex-direction: column;
+	}
+  }
+  .dw-clstr__sgmnt--clmn {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+			flex-direction: column;
+  }
+  @media (min-width: 430px) {
+	.dw-clstr__sgmnt--hlf {
+	  -ms-flex-preferred-size: 50%;
+		  flex-basis: 50%;
+	}
+	.dw-clstr__sgmnt--qrt {
+	  -ms-flex-preferred-size: 25%;
+		  flex-basis: 25%;
+	}
+  }
+  /**
+	* Theming
+  */
+  * {
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+  }
+ 
 
+  /**
+  * Images
+  */
+
+  img.dw-pnl__cntnt,
+  img.dw-flp__pnl {
+	padding: 0;
+  }
+  img.dw-flp__pnl {
+	max-height: 100%;
+  }
+  @-webkit-keyframes fade {
+	from {
+	  opacity: 0;
+	}
+	to {
+	  opacity: 1;
+	}
+  }
+  @keyframes fade {
+	from {
+	  opacity: 0;
+	}
+	to {
+	  opacity: 1;
+	}
+  }
 
 
 /* ------------------------------------------------------------------------------
@@ -576,6 +806,36 @@ ul li {
 	bottom: -100px;
 	padding-left:15%;
 }
+
+/* ------------------------------------------------------------------------------
+	Misc padding and margin
+-------------------------------------------------------------------------------*/
+
+.pts {
+	padding-top: 10px;
+}
+
+.ptm {
+	padding-top: 20px;
+}
+
+.ptl {
+	padding-top: 50px;
+}
+
+.pbs {
+	padding-bottom: 10px;
+}
+
+.pbm {
+	padding-bottom: 20px;
+}
+
+.pbl {
+	padding-bottom: 50px;
+}
+
+
 
 /* ------------------------------------------------------------------------------
 	Owl Coursol
