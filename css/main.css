@@ -100,13 +100,15 @@ h5 {
 -------------------------------------------------------------------------------*/
 a {
 	color: #c9cc20;
+	text-decoration: underline;
 }
 a:hover, a:focus {
 	text-decoration: none;
-	-moz-transition: background-color, color, 0.3s;
-	-o-transition: background-color, color, 0.3s;
-	-webkit-transition: background-color, color, 0.3s;
-	transition: background-color, color, 0.3s;
+	-moz-transition: background-color, color, 0.5s;
+	-o-transition: background-color, color, 0.5s;
+	-webkit-transition: background-color, color, 0.5s;
+	transition: background-color, color, 0.5s;
+	color: #6c7279;
 }
 body {
 	font-family: "Roboto", sans-serif;
@@ -455,6 +457,11 @@ ul li {
 	margin-bottom: 10px;
 }
 
+.shadow {
+	-webkit-box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.2);
+	box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.2);
+}
 
 
 /* ------------------------------------------------------------------------------
@@ -470,9 +477,9 @@ ul li {
 
 .modal p {
 	font-family: "Roboto", sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 300;
-    line-height: 21px;
+    line-height: 2;
     letter-spacing: 1px;
     padding-right: 12%;
 }
@@ -833,6 +840,10 @@ ul li {
 
 .pbl {
 	padding-bottom: 50px;
+}
+
+.mrs {
+	margin-right: 10px
 }
 
 
