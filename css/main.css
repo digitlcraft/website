@@ -158,6 +158,31 @@ ul li {
 .img-responsive {
 	margin:auto;
 }
+
+/* ------------------------------------------------------------------------------
+	Colours
+-------------------------------------------------------------------------------*/
+
+.yellow {
+	color: #c9cc20;
+}
+
+.main-grey {
+	color: #6c7279;
+}
+
+.secondary-grey{
+	color: #636363;
+}
+
+.green {
+	color: #afd34c;;
+}
+
+.white {
+	color: white;
+}
+
 /* ------------------------------------------------------------------------------
 	Header
 -------------------------------------------------------------------------------*/
@@ -392,7 +417,7 @@ ul li {
 }
 
 .banner-img {
-	bottom: -186px;
+	bottom: -180px;
 	position: relative;
 }
 .banner-btn a {
@@ -753,6 +778,9 @@ ul li {
 .features1 {
 	background-color:#f2f2f2;
 }
+.form-content {
+	background-color:#afd34c;
+}
 .left {
 	text-align:right;
 	padding-right:5%;
@@ -860,7 +888,7 @@ ul li {
 -------------------------------------------------------------------------------*/
 
 	.overlay {
-	background-color: rgba(60, 57, 162, 0.9);
+	background-color: rgba(19, 18, 44, 0.9);
 	height: 100%;
 	left: 0;
 	position: absolute;

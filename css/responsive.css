@@ -81,6 +81,7 @@
 .banner-img {
 margin:auto;
 bottom: -130px;
+max-width: 80%;
 }
  .banner-btn a {
  margin-bottom: 100px;
@@ -153,7 +154,8 @@ text-align:center;
  margin-bottom: 70px;
 }
  .banner-text {
- padding-top: 35%;
+ /* padding-top: 35%; */
+ margin: 80px 0;
 }
 .footer a {
  font-size:14px;
